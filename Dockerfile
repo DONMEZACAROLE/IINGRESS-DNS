@@ -1,8 +1,8 @@
-FROM nginx:latest
+FROM httpd:latest
 
-COPY ./catalogue user/share/nginx/html
+COPY ./catalogue/* /usr/local/apache2/htdocs/
 
-EXPOSE 81
+EXPOSE 80
 
 # docker build -t mon_site
 
